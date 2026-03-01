@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Platform — BlackPrint</title>
+  <meta name="description" content="BlackPrint structures 150+ datasets into a single analytical system. See how the Define → Analyze → Decide workflow works." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <div class="nav__logo-mark">BP</div>
+        BLACKPRINT
+      </a>
+      <ul class="nav__links">
+        <li><a href="platform.html" class="nav__link active">Platform</a></li>
+        <li><a href="use-cases/index.html" class="nav__link">Use Cases</a></li>
+        <li><a href="data/index.html" class="nav__link">Data</a></li>
+        <li><a href="company/index.html" class="nav__link">Company</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="demo.html" class="btn btn--primary">Book a Demo</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">The Platform</span>
+      <h1>One system. Every variable<br/>that determines whether a location wins.</h1>
+      <p>BlackPrint is built for CRE teams who need to evaluate, compare, and validate expansion decisions faster than traditional processes allow.</p>
+      <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="demo.html" class="btn btn--primary">Book a Walkthrough</a>
+        <a href="#workflow" class="btn btn--secondary">See the workflow →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKFLOW DEEP DIVE -->
+  <section class="section section--dark" id="workflow">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="eyebrow">Three-Step Workflow</span>
+        <h2>From question to decision.<br/>In one system.</h2>
+      </div>
+
+      <!-- Step 1: Define -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-16);align-items:center;margin-bottom:var(--space-20);" class="reveal">
+        <div>
+          <div style="display:flex;align-items:center;gap:var(--space-4);margin-bottom:var(--space-6);">
+            <div class="step-num">01</div>
+            <span class="eyebrow">Define</span>
+          </div>
+          <h3 style="font-size:1.625rem;margin-bottom:var(--space-4);">Choose your geography with precision.</h3>
+          <p style="color:var(--depth-3);margin-bottom:var(--space-6);line-height:1.65;">Choose a city. Select a territory. Search any address. BlackPrint gives you a precise geographic canvas — from a single parcel to an entire metropolitan corridor.</p>
+          <div class="platform-feature-list">
+            <div class="platform-feature">
+              <div class="platform-feature__icon">●</div>
+              <p>Radius, walk time, or drive time capture areas</p>
+            </div>
+            <div class="platform-feature">
+              <div class="platform-feature__icon">●</div>
+              <p>Side-by-side multi-location comparison</p>
+            </div>
+            <div class="platform-feature">
+              <div class="platform-feature__icon">●</div>
+              <p>City, corridor, and parcel-level precision</p>
+            </div>
+            <div class="platform-feature">
+              <div class="platform-feature__icon">●</div>
+              <p>Saved search areas for ongoing monitoring</p>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--depth-8);border:1px solid var(--depth-6);border-radius:16px;overflow:hidden;aspect-ratio:4/3;">
+          <!-- Platform screenshot mockup -->
+          <svg viewBox="0 0 600 450" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <rect width="600" height="450" fill="#232a35"/>
+            <!-- Toolbar -->
+            <rect width="600" height="44" fill="#1e242d"/>
+            <circle cx="18" cy="22" r="5" fill="#383838"/>
+            <rect x="32" y="17" width="80" height="10" rx="3" fill="#383838"/>
+            <rect x="490" y="14" width="90" height="16" rx="4" fill="#0875E3"/>
+            <!-- Map -->
+            <rect x="0" y="44" width="600" height="406" fill="#1a2030"/>
+            <g stroke="#2d3748" stroke-width="1" opacity="0.7">
+              <line x1="0" y1="110" x2="600" y2="110"/>
+              <line x1="0" y1="220" x2="600" y2="220"/>
+              <line x1="0" y1="330" x2="600" y2="330"/>
+              <line x1="150" y1="44" x2="150" y2="450"/>
+              <line x1="300" y1="44" x2="300" y2="450"/>
+              <line x1="450" y1="44" x2="450" y2="450"/>
+            </g>
+            <!-- Trade area circle -->
+            <circle cx="300" cy="247" r="120" fill="none" stroke="#52BCF5" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.8"/>
+            <circle cx="300" cy="247" r="70" fill="none" stroke="#52BCF5" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
+            <!-- Shaded capture area -->
+            <circle cx="300" cy="247" r="120" fill="rgba(82,188,245,0.06)"/>
+            <!-- Pin -->
+            <circle cx="300" cy="247" r="12" fill="#0875E3" opacity="0.3"/>
+            <circle cx="300" cy="247" r="7" fill="#0875E3"/>
+            <circle cx="300" cy="247" r="3" fill="#52BCF5"/>
+            <!-- Labels -->
+            <text x="300" y="138" fill="#52BCF5" font-size="9" text-anchor="middle" font-family="sans-serif">1 km radius</text>
+            <text x="300" y="186" fill="#52BCF5" font-size="8" text-anchor="middle" font-family="sans-serif" opacity="0.6">15 min walk</text>
+            <!-- Sidebar -->
+            <rect x="420" y="60" width="165" height="220" rx="6" fill="rgba(30,36,45,0.95)" stroke="#383838"/>
+            <text x="432" y="82" fill="#8D9398" font-size="8" font-family="monospace">CAPTURE AREA</text>
+            <text x="432" y="100" fill="#D7DCE0" font-size="12" font-family="sans-serif" font-weight="bold">Polanco, CDMX</text>
+            <rect x="432" y="108" width="140" height="1" fill="#383838"/>
+            <text x="432" y="124" fill="#8D9398" font-size="8" font-family="monospace">RADIUS</text>
+            <text x="432" y="138" fill="#D7DCE0" font-size="11" font-family="sans-serif">1.0 km</text>
+            <text x="432" y="156" fill="#8D9398" font-size="8" font-family="monospace">POPULATION</text>
+            <text x="432" y="170" fill="#D7DCE0" font-size="11" font-family="sans-serif">124,300</text>
+            <text x="432" y="188" fill="#8D9398" font-size="8" font-family="monospace">DAYTIME POP</text>
+            <text x="432" y="202" fill="#D7DCE0" font-size="11" font-family="sans-serif">89,600</text>
+            <text x="432" y="220" fill="#8D9398" font-size="8" font-family="monospace">BUSINESSES</text>
+            <text x="432" y="234" fill="#D7DCE0" font-size="11" font-family="sans-serif">3,240</text>
+            <text x="432" y="252" fill="#8D9398" font-size="8" font-family="monospace">ZONING CLASS</text>
+            <text x="432" y="266" fill="#67AC5C" font-size="11" font-family="sans-serif">Mixed-Use A</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Step 2: Analyze -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-16);align-items:center;margin-bottom:var(--space-20);" class="reveal">
+        <div style="background:var(--depth-8);border:1px solid var(--depth-6);border-radius:16px;overflow:hidden;aspect-ratio:4/3;order:1;">
+          <svg viewBox="0 0 600 450" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <rect width="600" height="450" fill="#232a35"/>
+            <rect width="600" height="44" fill="#1e242d"/>
+            <rect x="12" y="13" width="60" height="18" rx="4" fill="rgba(82,188,245,0.2)"/>
+            <text x="42" y="25" fill="#52BCF5" font-size="9" text-anchor="middle" font-family="sans-serif">Traffic</text>
+            <rect x="78" y="13" width="80" height="18" rx="4" fill="rgba(0,188,212,0.15)"/>
+            <text x="118" y="25" fill="#00BCD4" font-size="9" text-anchor="middle" font-family="sans-serif">Demographics</text>
+            <rect x="164" y="13" width="60" height="18" rx="4" fill="rgba(168,176,242,0.15)"/>
+            <text x="194" y="25" fill="#A8B0F2" font-size="9" text-anchor="middle" font-family="sans-serif">Zoning</text>
+            <rect x="230" y="13" width="70" height="18" rx="4" fill="rgba(97,118,248,0.15)"/>
+            <text x="265" y="25" fill="#6176F8" font-size="9" text-anchor="middle" font-family="sans-serif">Competitors</text>
+            <!-- Map layers -->
+            <rect x="0" y="44" width="600" height="406" fill="#1a2030"/>
+            <g stroke="#2d3748" stroke-width="0.75" opacity="0.5">
+              <line x1="0" y1="130" x2="600" y2="130"/>
+              <line x1="0" y1="260" x2="600" y2="260"/>
+              <line x1="0" y1="390" x2="600" y2="390"/>
+              <line x1="200" y1="44" x2="200" y2="450"/>
+              <line x1="400" y1="44" x2="400" y2="450"/>
+            </g>
+            <!-- Traffic heat layer -->
+            <ellipse cx="280" cy="230" rx="170" ry="110" fill="rgba(255,111,97,0.2)"/>
+            <ellipse cx="280" cy="230" rx="100" ry="65" fill="rgba(255,111,97,0.15)"/>
+            <!-- Demographic zones -->
+            <rect x="200" y="130" width="200" height="130" rx="2" fill="rgba(0,188,212,0.08)"/>
+            <!-- Competitor pins -->
+            <circle cx="220" cy="195" r="5" fill="#FE2B7C"/>
+            <circle cx="310" cy="210" r="5" fill="#FE2B7C"/>
+            <circle cx="340" cy="175" r="5" fill="#FE2B7C"/>
+            <circle cx="250" cy="265" r="5" fill="#FE2B7C"/>
+            <circle cx="175" cy="220" r="5" fill="#FE2B7C"/>
+            <!-- Feature location pin -->
+            <circle cx="280" cy="230" r="9" fill="#0875E3" opacity="0.3"/>
+            <circle cx="280" cy="230" r="6" fill="#0875E3"/>
+            <circle cx="280" cy="230" r="2.5" fill="#52BCF5"/>
+            <!-- Legend -->
+            <rect x="420" y="58" width="165" height="120" rx="6" fill="rgba(30,36,45,0.9)" stroke="#383838"/>
+            <text x="432" y="76" fill="#8D9398" font-size="8" font-family="monospace">ACTIVE LAYERS</text>
+            <circle cx="440" cy="90" r="4" fill="#FF6F61"/>
+            <text x="450" y="93" fill="#D7DCE0" font-size="9" font-family="sans-serif">Traffic intensity</text>
+            <circle cx="440" cy="107" r="4" fill="#00BCD4"/>
+            <text x="450" y="110" fill="#D7DCE0" font-size="9" font-family="sans-serif">Demographics</text>
+            <circle cx="440" cy="124" r="4" fill="#A8B0F2"/>
+            <text x="450" y="127" fill="#D7DCE0" font-size="9" font-family="sans-serif">Zoning</text>
+            <circle cx="440" cy="141" r="4" fill="#FE2B7C"/>
+            <text x="450" y="144" fill="#D7DCE0" font-size="9" font-family="sans-serif">Competitors (5)</text>
+            <text x="432" y="168" fill="#8D9398" font-size="8" font-family="monospace">DATASETS LOADED</text>
+            <text x="432" y="180" fill="#52BCF5" font-size="12" font-family="sans-serif" font-weight="bold">147 / 150+</text>
+          </svg>
+        </div>
+        <div style="order:2;">
+          <div style="display:flex;align-items:center;gap:var(--space-4);margin-bottom:var(--space-6);">
+            <div class="step-num">02</div>
+            <span class="eyebrow">Analyze</span>
+          </div>
+          <h3 style="font-size:1.625rem;margin-bottom:var(--space-4);">Layer real data across your selected area.</h3>
+          <p style="color:var(--depth-3);margin-bottom:var(--space-6);line-height:1.65;">150+ structured datasets available simultaneously. Mobility and traffic patterns. Demographic density and income segmentation. Zoning classifications and cadastral boundaries. Competitive presence — brands, categories, ratings, opening dates. On-market and off-market commercial listings. In seconds, not days.</p>
+          <div class="platform-feature-list">
+            <div class="platform-feature">
+              <div class="platform-feature__icon">●</div>
+              <p>Mobility and pedestrian traffic by hour</p>
+            </div>
+            <div class="platform-feature">
+              <div class="platform-feature__icon">●</div>
+              <p>Demographic density and income segmentation</p>
+            </div>
+            <div class="platform-feature">
+              <div class="platform-feature__icon">●</div>
+              <p>Full competitor brand and category mapping</p>
+            </div>
+            <div class="platform-feature">
+              <div class="platform-feature__icon">●</div>
+              <p>Zoning, cadastral, and regulatory layers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Decide -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-16);align-items:center;" class="reveal">
+        <div>
+          <div style="display:flex;align-items:center;gap:var(--space-4);margin-bottom:var(--space-6);">
+            <div class="step-num">03</div>
+            <span class="eyebrow">Decide</span>
+          </div>
+          <h3 style="font-size:1.625rem;margin-bottom:var(--space-4);">Score, rank, and align your team.</h3>
+          <p style="color:var(--depth-3);margin-bottom:var(--space-6);line-height:1.65;">Score and rank your opportunities. Compare locations objectively. Build a shared portfolio your team can evaluate together. Export analysis-ready reports for internal validation or executive review.</p>
+          <div class="platform-feature-list">
+            <div class="platform-feature">
+              <div class="platform-feature__icon">●</div>
+              <p>Composite location scoring (A–E scale)</p>
+            </div>
+            <div class="platform-feature">
+              <div class="platform-feature__icon">●</div>
+              <p>Side-by-side site comparison tables</p>
+            </div>
+            <div class="platform-feature">
+              <div class="platform-feature__icon">●</div>
+              <p>Export to PDF or structured data formats</p>
+            </div>
+            <div class="platform-feature">
+              <div class="platform-feature__icon">●</div>
+              <p>Shared team portfolios with commenting</p>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--depth-8);border:1px solid var(--depth-6);border-radius:16px;padding:var(--space-8);">
+          <!-- Score comparison mockup -->
+          <div style="margin-bottom:var(--space-6);">
+            <p style="font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--depth-5);margin-bottom:var(--space-4);">Location Comparison — Q1 Pipeline</p>
+          </div>
+
+          <!-- Location row 1 -->
+          <div style="display:flex;align-items:center;gap:var(--space-4);padding:var(--space-4);background:var(--depth-7);border-radius:8px;margin-bottom:var(--space-3);">
+            <div style="width:32px;height:32px;border-radius:6px;background:rgba(103,172,92,0.2);display:flex;align-items:center;justify-content:center;color:#67AC5C;font-weight:700;font-size:0.875rem;flex-shrink:0;">A</div>
+            <div style="flex:1;">
+              <p style="font-size:0.9rem;color:var(--on-primary);font-weight:500;margin-bottom:2px;">Polanco — Emilio Castelar</p>
+              <div class="score-scale">
+                <div class="score-segment" style="background:#67AC5C;flex:8.4"></div>
+                <div class="score-segment" style="background:var(--depth-7);flex:1.6"></div>
+              </div>
+            </div>
+            <div style="font-size:1.125rem;font-weight:700;color:#67AC5C;flex-shrink:0;">8.4</div>
+          </div>
+
+          <!-- Location row 2 -->
+          <div style="display:flex;align-items:center;gap:var(--space-4);padding:var(--space-4);background:var(--depth-7);border-radius:8px;margin-bottom:var(--space-3);">
+            <div style="width:32px;height:32px;border-radius:6px;background:rgba(103,172,92,0.15);display:flex;align-items:center;justify-content:center;color:#9bc75a;font-weight:700;font-size:0.875rem;flex-shrink:0;">B</div>
+            <div style="flex:1;">
+              <p style="font-size:0.9rem;color:var(--on-primary);font-weight:500;margin-bottom:2px;">Santa Fe — Paseo de los Tamarindos</p>
+              <div class="score-scale">
+                <div class="score-segment" style="background:#9bc75a;flex:7.1"></div>
+                <div class="score-segment" style="background:var(--depth-7);flex:2.9"></div>
+              </div>
+            </div>
+            <div style="font-size:1.125rem;font-weight:700;color:#9bc75a;flex-shrink:0;">7.1</div>
+          </div>
+
+          <!-- Location row 3 -->
+          <div style="display:flex;align-items:center;gap:var(--space-4);padding:var(--space-4);background:var(--depth-7);border-radius:8px;margin-bottom:var(--space-3);">
+            <div style="width:32px;height:32px;border-radius:6px;background:rgba(251,192,45,0.15);display:flex;align-items:center;justify-content:justify;color:#FBC02D;font-weight:700;font-size:0.875rem;flex-shrink:0;">C</div>
+            <div style="flex:1;">
+              <p style="font-size:0.9rem;color:var(--on-primary);font-weight:500;margin-bottom:2px;">Roma Norte — Álvaro Obregón</p>
+              <div class="score-scale">
+                <div class="score-segment" style="background:#FBC02D;flex:6.2"></div>
+                <div class="score-segment" style="background:var(--depth-7);flex:3.8"></div>
+              </div>
+            </div>
+            <div style="font-size:1.125rem;font-weight:700;color:#FBC02D;flex-shrink:0;">6.2</div>
+          </div>
+
+          <div style="margin-top:var(--space-6);display:flex;gap:var(--space-3);">
+            <div class="btn btn--primary btn--sm" style="pointer-events:none;">Export Report</div>
+            <div class="btn btn--secondary btn--sm" style="pointer-events:none;">Share Portfolio</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DATASET DEPTH -->
+  <section class="section section--mid" id="data-depth">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="eyebrow">Data Coverage</span>
+        <h2>150+ structured datasets.<br/>Built for LATAM CRE.</h2>
+        <p>Not repurposed from a US or European platform. Structured for the markets where decisions are actually being made.</p>
+      </div>
+
+      <div class="data-categories">
+        <div class="data-category reveal">
+          <div class="data-category__header">
+            <div class="data-category__dot" style="background:var(--map-orange)"></div>
+            <h3>Mobility &amp; Traffic</h3>
+          </div>
+          <ul>
+            <li>Pedestrian foot traffic by hour and day</li>
+            <li>Vehicle traffic counts and intensity</li>
+            <li>Public transit ridership and coverage</li>
+            <li>Walk and drive isochrones</li>
+          </ul>
+        </div>
+        <div class="data-category reveal">
+          <div class="data-category__header">
+            <div class="data-category__dot" style="background:var(--map-turquoise)"></div>
+            <h3>Demographics</h3>
+          </div>
+          <ul>
+            <li>Population density and growth trends</li>
+            <li>Income segmentation by AGEB</li>
+            <li>Age and household composition</li>
+            <li>Daytime vs. nighttime population</li>
+          </ul>
+        </div>
+        <div class="data-category reveal">
+          <div class="data-category__header">
+            <div class="data-category__dot" style="background:var(--map-lavender)"></div>
+            <h3>Zoning &amp; Land Use</h3>
+          </div>
+          <ul>
+            <li>Municipal zoning classifications</li>
+            <li>Permitted use by parcel</li>
+            <li>Setback and height restrictions</li>
+            <li>Pending development permits</li>
+          </ul>
+        </div>
+        <div class="data-category reveal">
+          <div class="data-category__header">
+            <div class="data-category__dot" style="background:var(--map-blue)"></div>
+            <h3>Competitive Intelligence</h3>
+          </div>
+          <ul>
+            <li>Brand locations and categories</li>
+            <li>Customer ratings and review volume</li>
+            <li>Opening and closing dates</li>
+            <li>Format and sq ft estimates</li>
+          </ul>
+        </div>
+        <div class="data-category reveal">
+          <div class="data-category__header">
+            <div class="data-category__dot" style="background:var(--map-green)"></div>
+            <h3>Commercial Listings</h3>
+          </div>
+          <ul>
+            <li>On-market retail availabilities</li>
+            <li>Off-market opportunity signals</li>
+            <li>Asking rents and price per m²</li>
+            <li>Vacancy rates by corridor</li>
+          </ul>
+        </div>
+        <div class="data-category reveal">
+          <div class="data-category__header">
+            <div class="data-category__dot" style="background:var(--map-purple)"></div>
+            <h3>Cadastral &amp; Property</h3>
+          </div>
+          <ul>
+            <li>Parcel boundaries and ownership</li>
+            <li>Building age and condition data</li>
+            <li>Land value assessments</li>
+            <li>Development history</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--dark" id="faq">
+    <div class="container" style="max-width:800px;">
+      <div class="section-header section-header--center reveal">
+        <span class="eyebrow">Common Questions</span>
+        <h2>Before you book.</h2>
+      </div>
+
+      <div class="faq-list reveal">
+        <details class="faq-item">
+          <summary>What geographic markets does BlackPrint cover?</summary>
+          <p>BlackPrint is built for Mexico and Latin America. Current primary coverage is across major Mexican metros — CDMX, Monterrey, Guadalajara, Querétaro, and expanding. Additional LATAM coverage is active and growing. Your walkthrough will confirm specific coverage for the markets you're evaluating.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How current is the data?</summary>
+          <p>Dataset freshness varies by category. Mobility and traffic data refreshes continuously. Competitive intelligence updates weekly. Listings are synced daily. Demographic and zoning data follows government cadence with manual enrichment. Full freshness specifications are available on request during a demo session.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How long does onboarding take?</summary>
+          <p>Most teams are active on BlackPrint within one week. The platform is designed to be adopted without a data science team. Your walkthrough session includes hands-on use in your actual markets — you leave the session knowing how to use it, not just what it does.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I export analysis for internal presentations?</summary>
+          <p>Yes. BlackPrint supports structured PDF export and data export formats suitable for executive presentations and board-level reviews. Reports are formatted to show the analytical rationale behind a recommendation — not just a summary, but the evidence chain.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What is the pricing model?</summary>
+          <p>Pricing is discussed during your walkthrough session, where we can confirm the right coverage tier for your geography and team size. We do not publish fixed pricing because the right structure depends on your markets and use case. No commitment is required from the demo session.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="reveal">
+        <span class="eyebrow">Next Step</span>
+        <h2>See it working in your markets.</h2>
+        <p>Book a 30-minute session. We'll use your actual geography — not a pre-built demo script. You'll leave with a clearer view of at least one expansion decision you're currently evaluating.</p>
+        <div class="final-cta__actions">
+          <a href="demo.html" class="btn btn--primary btn--lg">Book a Demo →</a>
+          <p class="final-cta__note">30 minutes. Focused on your markets. No commitment required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="/" class="nav__logo" style="margin-bottom:1rem;display:inline-flex;">
+            <div class="nav__logo-mark">BP</div>
+            BLACKPRINT
+          </a>
+          <p>Location intelligence platform for commercial real estate teams in Latin America.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="platform.html">How it Works</a></li>
+            <li><a href="data/index.html">Data</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Use Cases</h4>
+          <ul>
+            <li><a href="use-cases/retail.html">Retail Expansion</a></li>
+            <li><a href="use-cases/qsr.html">QSR &amp; Franchise</a></li>
+            <li><a href="use-cases/developers.html">Developers</a></li>
+            <li><a href="use-cases/funds.html">Investment Funds</a></li>
+            <li><a href="use-cases/brokers.html">Brokers</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="company/index.html">About</a></li>
+            <li><a href="insights/index.html">Insights</a></li>
+            <li><a href="demo.html">Book a Demo</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 BlackPrint. All rights reserved.</p>
+        <p style="color:var(--depth-6);">TOTEC × BlackPrint</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

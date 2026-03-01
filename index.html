@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BlackPrint — Location Intelligence for Latin American CRE</title>
+  <meta name="description" content="BlackPrint structures 150+ datasets into a single analytical system for commercial real estate teams in Latin America — so decisions are made on evidence, not instinct." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ======== NAVIGATION ======== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <div class="nav__logo-mark">BP</div>
+        BLACKPRINT
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="platform.html" class="nav__link">Platform</a></li>
+        <li><a href="use-cases/index.html" class="nav__link">Use Cases</a></li>
+        <li><a href="data/index.html" class="nav__link">Data</a></li>
+        <li><a href="company/index.html" class="nav__link">Company</a></li>
+      </ul>
+
+      <div class="nav__cta">
+        <a href="demo.html" class="btn btn--primary">Book a Demo</a>
+      </div>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ======== SECTION 1: HERO ======== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__map">
+        <!-- SVG Map Visualization -->
+        <svg class="map-canvas" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <!-- Base map layer -->
+          <rect width="1200" height="800" fill="#1a1a1a"/>
+
+          <!-- Street grid - major roads -->
+          <g stroke="#2d3748" stroke-width="1.5" opacity="0.6">
+            <!-- Horizontal roads -->
+            <line x1="0" y1="150" x2="1200" y2="150"/>
+            <line x1="0" y1="280" x2="1200" y2="280"/>
+            <line x1="0" y1="420" x2="1200" y2="420"/>
+            <line x1="0" y1="560" x2="1200" y2="560"/>
+            <line x1="0" y1="690" x2="1200" y2="690"/>
+            <!-- Vertical roads -->
+            <line x1="180" y1="0" x2="180" y2="800"/>
+            <line x1="360" y1="0" x2="360" y2="800"/>
+            <line x1="540" y1="0" x2="540" y2="800"/>
+            <line x1="720" y1="0" x2="720" y2="800"/>
+            <line x1="900" y1="0" x2="900" y2="800"/>
+            <line x1="1080" y1="0" x2="1080" y2="800"/>
+          </g>
+
+          <!-- Secondary streets -->
+          <g stroke="#232a35" stroke-width="0.75" opacity="0.5">
+            <line x1="0" y1="90" x2="1200" y2="90"/>
+            <line x1="0" y1="215" x2="1200" y2="215"/>
+            <line x1="0" y1="350" x2="1200" y2="350"/>
+            <line x1="0" y1="490" x2="1200" y2="490"/>
+            <line x1="0" y1="625" x2="1200" y2="625"/>
+            <line x1="270" y1="0" x2="270" y2="800"/>
+            <line x1="450" y1="0" x2="450" y2="800"/>
+            <line x1="630" y1="0" x2="630" y2="800"/>
+            <line x1="810" y1="0" x2="810" y2="800"/>
+            <line x1="990" y1="0" x2="990" y2="800"/>
+          </g>
+
+          <!-- Heat/traffic intensity layers -->
+          <g class="map-layer" style="animation-delay:0.3s">
+            <ellipse cx="750" cy="380" rx="200" ry="140" fill="rgba(255,111,97,0.18)"/>
+            <ellipse cx="750" cy="380" rx="120" ry="80" fill="rgba(255,111,97,0.12)"/>
+            <ellipse cx="520" cy="250" rx="140" ry="90" fill="rgba(255,179,0,0.12)"/>
+            <ellipse cx="900" cy="500" rx="100" ry="70" fill="rgba(255,111,97,0.1)"/>
+          </g>
+
+          <!-- Demographic segments -->
+          <g class="map-layer" style="animation-delay:0.5s" opacity="0.4">
+            <rect x="360" y="150" width="180" height="130" rx="2" fill="#6176F8" opacity="0.1"/>
+            <rect x="540" y="280" width="180" height="140" rx="2" fill="#00BCD4" opacity="0.1"/>
+            <rect x="720" y="280" width="180" height="140" rx="2" fill="#A8B0F2" opacity="0.12"/>
+          </g>
+
+          <!-- Trade area radius (main featured location) -->
+          <g class="map-layer" style="animation-delay:0.7s">
+            <circle cx="750" cy="380" r="160" fill="none" stroke="#52BCF5" stroke-width="1" stroke-dasharray="6 4" opacity="0.6"/>
+            <circle cx="750" cy="380" r="90" fill="none" stroke="#52BCF5" stroke-width="0.75" stroke-dasharray="4 3" opacity="0.4"/>
+          </g>
+
+          <!-- Location pins -->
+          <!-- Primary featured pin -->
+          <g class="map-pin" style="animation-delay:0.9s" transform="translate(742,350)">
+            <circle cx="8" cy="8" r="10" fill="#0875E3" opacity="0.25"/>
+            <circle cx="8" cy="8" r="6" fill="#0875E3"/>
+            <circle cx="8" cy="8" r="3" fill="#52BCF5"/>
+          </g>
+
+          <!-- Secondary pins -->
+          <g class="map-pin" style="animation-delay:1.1s" transform="translate(512,242)">
+            <circle cx="6" cy="6" r="6" fill="#0875E3" opacity="0.2"/>
+            <circle cx="6" cy="6" r="4" fill="#0875E3"/>
+            <circle cx="6" cy="6" r="2" fill="#fff"/>
+          </g>
+          <g class="map-pin" style="animation-delay:1.2s" transform="translate(692,458)">
+            <circle cx="6" cy="6" r="6" fill="#FE2B7C" opacity="0.2"/>
+            <circle cx="6" cy="6" r="4" fill="#FE2B7C"/>
+            <circle cx="6" cy="6" r="2" fill="#fff"/>
+          </g>
+          <g class="map-pin" style="animation-delay:1.3s" transform="translate(834,502)">
+            <circle cx="6" cy="6" r="6" fill="#0875E3" opacity="0.2"/>
+            <circle cx="6" cy="6" r="4" fill="#0875E3"/>
+            <circle cx="6" cy="6" r="2" fill="#fff"/>
+          </g>
+          <g class="map-pin" style="animation-delay:1.35s" transform="translate(620,308)">
+            <circle cx="5" cy="5" r="5" fill="#43A047" opacity="0.2"/>
+            <circle cx="5" cy="5" r="3.5" fill="#43A047"/>
+            <circle cx="5" cy="5" r="1.5" fill="#fff"/>
+          </g>
+          <g class="map-pin" style="animation-delay:1.4s" transform="translate(804,328)">
+            <circle cx="5" cy="5" r="5" fill="#43A047" opacity="0.2"/>
+            <circle cx="5" cy="5" r="3.5" fill="#43A047"/>
+            <circle cx="5" cy="5" r="1.5" fill="#fff"/>
+          </g>
+          <g class="map-pin" style="animation-delay:1.45s" transform="translate(570,465)">
+            <circle cx="5" cy="5" r="5" fill="#FBC02D" opacity="0.2"/>
+            <circle cx="5" cy="5" r="3.5" fill="#FBC02D"/>
+            <circle cx="5" cy="5" r="1.5" fill="#fff"/>
+          </g>
+          <g class="map-pin" style="animation-delay:1.5s" transform="translate(968,398)">
+            <circle cx="5" cy="5" r="5" fill="#0875E3" opacity="0.2"/>
+            <circle cx="5" cy="5" r="3.5" fill="#0875E3"/>
+            <circle cx="5" cy="5" r="1.5" fill="#fff"/>
+          </g>
+          <g class="map-pin" style="animation-delay:1.55s" transform="translate(440,395)">
+            <circle cx="5" cy="5" r="5" fill="#FE2B7C" opacity="0.2"/>
+            <circle cx="5" cy="5" r="3.5" fill="#FE2B7C"/>
+            <circle cx="5" cy="5" r="1.5" fill="#fff"/>
+          </g>
+
+          <!-- Data panel overlay on map -->
+          <g class="map-layer" style="animation-delay:1.2s" transform="translate(860,160)">
+            <rect width="200" height="140" rx="6" fill="rgba(47,47,47,0.85)" stroke="#484848"/>
+            <text x="12" y="26" fill="#8D9398" font-size="9" font-family="monospace" letter-spacing="1">LOCATION SCORE</text>
+            <text x="12" y="50" fill="#52BCF5" font-size="20" font-weight="bold" font-family="sans-serif">8.4</text>
+            <text x="52" y="50" fill="#8D9398" font-size="10" font-family="sans-serif">/10</text>
+            <rect x="12" y="58" width="176" height="1" fill="#484848"/>
+            <text x="12" y="74" fill="#8D9398" font-size="8" font-family="monospace">TRADE AREA POP</text>
+            <text x="12" y="86" fill="#D7DCE0" font-size="11" font-family="sans-serif">124,300</text>
+            <text x="12" y="100" fill="#8D9398" font-size="8" font-family="monospace">COMPETITOR COUNT</text>
+            <text x="12" y="112" fill="#D7DCE0" font-size="11" font-family="sans-serif">7 within 1km</text>
+            <text x="12" y="128" fill="#8D9398" font-size="8" font-family="monospace">SATURATION INDEX</text>
+            <text x="12" y="140" fill="#67AC5C" font-size="11" font-family="sans-serif">Low — Opportunity</text>
+          </g>
+        </svg>
+      </div>
+      <div class="hero__gradient"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__eyebrow">
+          <span class="eyebrow">✳ BLACKPRINT — Location Intelligence Platform</span>
+        </div>
+        <h1 class="hero__headline animate-fade-up animate-fade-up--1">
+          Where every expansion<br/>decision is built on <em>structure.</em>
+        </h1>
+        <p class="hero__subheadline animate-fade-up animate-fade-up--2">
+          BlackPrint is the location intelligence platform for commercial real estate teams in Latin America. It structures 150+ datasets into a single analytical system — so decisions are made on evidence, not instinct.
+        </p>
+        <div class="hero__ctas animate-fade-up animate-fade-up--3">
+          <a href="demo.html" class="btn btn--primary btn--lg">Book a Demo</a>
+          <a href="platform.html" class="btn btn--secondary btn--lg">
+            See how it works
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 8h10M9 4l4 4-4 4"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SECTION 2: PROBLEM REFRAME ======== -->
+  <section class="section section--mid" id="problem">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">The Problem</span>
+        <h2>Expansion decisions don't fail from lack of experience.<br/>They fail from lack of structure.</h2>
+      </div>
+
+      <div class="problem-cards">
+        <div class="problem-card reveal">
+          <div class="problem-card__number">01 —</div>
+          <h3>Site selection based on incomplete context</h3>
+          <p>Most location decisions rely on visible signals: foot traffic, nearby stores, broker input. But the factors that determine whether a store outperforms or underperforms are rarely visible on the surface. Competitor saturation, mobility patterns, demographic alignment, zoning restrictions — these require structured data, not observation.</p>
+        </div>
+        <div class="problem-card reveal">
+          <div class="problem-card__number">02 —</div>
+          <h3>Analysis done once, not continuously</h3>
+          <p>Markets shift. A location evaluated six months ago is not the same location today. Most teams conduct point-in-time analysis, then act on conclusions that have already aged. A structured intelligence system keeps analysis current as conditions change.</p>
+        </div>
+        <div class="problem-card reveal">
+          <div class="problem-card__number">03 —</div>
+          <h3>Data spread across disconnected sources</h3>
+          <p>Demographics from one vendor. Traffic from another. Zoning from a government portal. Listings from a broker. Competitive density from a spreadsheet someone built manually. No single person, no matter how experienced, can synthesize this accurately at speed.</p>
+        </div>
+      </div>
+
+      <div class="bridge-line reveal">
+        <p>BlackPrint doesn't replace market experience. It gives that experience a structural foundation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SECTION 3: THE GAP ======== -->
+  <section class="section section--dark" id="gap">
+    <div class="container">
+      <div class="gap-content">
+        <div class="reveal">
+          <span class="eyebrow">Why It Persists</span>
+          <h2 style="margin-top:0.75rem;margin-bottom:1.5rem;">The data exists. The problem is fragmentation.</h2>
+          <p class="body-large" style="color:var(--depth-3);margin-bottom:1.5rem;">
+            Latin American CRE teams are not operating without data. They are operating with too many data sources, none of which speak to each other. Demographics live in one system. Mobility in another. Zoning in a government portal that was last updated two years ago. Competitive intelligence in a spreadsheet someone built manually.
+          </p>
+          <p style="color:var(--depth-3);margin-bottom:1.5rem;">
+            The result is not a data problem. It is a synthesis problem. Teams cannot evaluate, compare, and validate decisions at the speed and consistency that modern expansion requires — not because they lack expertise, but because no single system gives them a unified view.
+          </p>
+          <p style="color:var(--depth-1);font-style:italic;">
+            BlackPrint is built to solve exactly this. Not by adding more data. By structuring it.
+          </p>
+        </div>
+
+        <div class="gap-visual reveal">
+          <div class="gap-boxes">
+            <div class="gap-box"><div class="gap-box__icon" style="background:#00BCD4"></div>Demographics</div>
+            <div class="gap-box"><div class="gap-box__icon" style="background:#FF6F61"></div>Traffic &amp; Mobility</div>
+            <div class="gap-box"><div class="gap-box__icon" style="background:#A8B0F2"></div>Zoning Records</div>
+            <div class="gap-box"><div class="gap-box__icon" style="background:#FBC02D"></div>Listings</div>
+            <div class="gap-box"><div class="gap-box__icon" style="background:#43A047"></div>Competitor Data</div>
+            <div class="gap-box"><div class="gap-box__icon" style="background:#7E57C2"></div>Cadastral</div>
+
+            <div class="gap-arrow" style="grid-column:1/-1;padding:1rem 0;color:var(--blue-highlight);font-size:1.5rem;">↓</div>
+
+            <div class="gap-unified">
+              <strong>BlackPrint</strong>
+              <p>150+ datasets. One analytical system. Structured for LATAM.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SECTION 4: THE SYSTEM ======== -->
+  <section class="section section--mid" id="system">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="eyebrow">How BlackPrint Works</span>
+        <h2>150+ datasets. One analytical system.<br/>From question to decision.</h2>
+      </div>
+
+      <div class="workflow-steps">
+        <div class="workflow-step reveal">
+          <div class="workflow-step__num">01 — Define</div>
+          <h3 class="workflow-step__title">Choose your geography.</h3>
+          <p>Choose a city. Select a territory. Search any address. BlackPrint gives you a precise geographic canvas — from a single parcel to an entire metropolitan corridor. Set capture areas by radius, walk time, or drive time. Stack multiple locations side by side.</p>
+        </div>
+        <div class="workflow-step reveal">
+          <div class="workflow-step__num">02 — Analyze</div>
+          <h3 class="workflow-step__title">Layer real data across your area.</h3>
+          <p>Mobility and traffic patterns. Demographic density and income segmentation. Zoning classifications and cadastral boundaries. Competitive presence: brands, categories, ratings, opening dates. On-market and off-market commercial listings. 150+ structured datasets — in seconds, not days.</p>
+        </div>
+        <div class="workflow-step reveal">
+          <div class="workflow-step__num">03 — Decide</div>
+          <h3 class="workflow-step__title">Score, rank, and act.</h3>
+          <p>Score and rank your opportunities. Compare locations objectively. Build a shared portfolio your team can evaluate together. Export analysis-ready reports for internal validation or executive review. Move from scattered data to aligned strategy — without changing your process, just structuring it.</p>
+        </div>
+      </div>
+
+      <div class="system-callout reveal">
+        <div class="system-callout__flow">
+          <span>Data</span>
+          <span class="arrow">→</span>
+          <span>Decision</span>
+          <span class="arrow">→</span>
+          <span>Strategy</span>
+        </div>
+        <p class="system-callout__desc">This is not a mapping tool. It is the operating system for real estate decision-making.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SECTION 5: USE CASES / ICP ======== -->
+  <section class="section section--dark" id="use-cases">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Built For</span>
+        <h2>Different decisions.<br/>The same need for clarity.</h2>
+      </div>
+
+      <div class="icp-cards">
+        <!-- Card 1: Retail -->
+        <div class="icp-card reveal">
+          <div class="icp-card__role">Retail Expansion</div>
+          <h3>Retail Expansion Teams</h3>
+          <div class="icp-card__section-label">The decision</div>
+          <p>Where to open next. Which market. Which specific location within that market. How a new site affects existing stores.</p>
+          <div class="icp-card__section-label">What BlackPrint shows you</div>
+          <p>Real competitive density. Trade area demographics that match your concept. Traffic patterns by time and mode. On and off-market listings in a single view.</p>
+          <div class="outcome">
+            <p>Fewer bad decisions. Faster site evaluation. Internal validation you can defend to leadership.</p>
+            <a href="use-cases/retail.html" class="btn btn--ghost mt-4">
+              Learn more →
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: QSR -->
+        <div class="icp-card reveal">
+          <div class="icp-card__role">QSR &amp; Franchise</div>
+          <h3>QSR &amp; Franchise Operators</h3>
+          <div class="icp-card__section-label">The decision</div>
+          <p>Which territories to enter. How to sequence expansion. Where saturation risk is building across your existing network.</p>
+          <div class="icp-card__section-label">What BlackPrint shows you</div>
+          <p>City-wide market segmentation. Cannibalization modeling. Competitor format density by submarket.</p>
+          <div class="outcome">
+            <p>Consistent criteria applied across regions. Expansion decisions that scale without scaling the error rate.</p>
+            <a href="use-cases/qsr.html" class="btn btn--ghost mt-4">Learn more →</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Developers -->
+        <div class="icp-card reveal">
+          <div class="icp-card__role">Real Estate Development</div>
+          <h3>Developers</h3>
+          <div class="icp-card__section-label">The decision</div>
+          <p>What to build, where, and for whom. Which retail mix will anchor a development. Where demand is structurally supported.</p>
+          <div class="icp-card__section-label">What BlackPrint shows you</div>
+          <p>Zoning and land use context. Demand signals by category. Competitive supply gaps in target corridors.</p>
+          <div class="outcome">
+            <p>Development decisions grounded in market reality, not broker intuition.</p>
+            <a href="use-cases/developers.html" class="btn btn--ghost mt-4">Learn more →</a>
+          </div>
+        </div>
+
+        <!-- Card 4: Funds -->
+        <div class="icp-card reveal">
+          <div class="icp-card__role">Investment Funds</div>
+          <h3>Investment Funds</h3>
+          <div class="icp-card__section-label">The decision</div>
+          <p>Whether a location or portfolio asset is structurally sound. What the risk profile of a site looks like over a 5–10 year horizon.</p>
+          <div class="icp-card__section-label">What BlackPrint shows you</div>
+          <p>Market context. Demand trends. Competitive dynamics. Regulatory constraints. All in one view, faster than any traditional due diligence process.</p>
+          <div class="outcome">
+            <p>Capital deployed with structured, auditable rationale.</p>
+            <a href="use-cases/funds.html" class="btn btn--ghost mt-4">Learn more →</a>
+          </div>
+        </div>
+
+        <!-- Card 5: Brokers -->
+        <div class="icp-card reveal">
+          <div class="icp-card__role">Brokerage</div>
+          <h3>Brokerage Firms</h3>
+          <div class="icp-card__section-label">The decision</div>
+          <p>How to advise clients with greater precision. How to identify opportunities before they reach the market.</p>
+          <div class="icp-card__section-label">What BlackPrint shows you</div>
+          <p>Off-market opportunity signals. Comparative site analysis. Market context that elevates your advisory position.</p>
+          <div class="outcome">
+            <p>More credible recommendations. Faster client decisions. Higher deal velocity.</p>
+            <a href="use-cases/brokers.html" class="btn btn--ghost mt-4">Learn more →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SECTION 6: OUTCOMES ======== -->
+  <section class="section section--mid" id="outcomes">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="eyebrow">What Changes</span>
+        <h2>BlackPrint doesn't promise perfect decisions.<br/>It gives every decision a structure it didn't have before.</h2>
+      </div>
+
+      <div class="outcome-blocks">
+        <div class="outcome-block reveal">
+          <div class="outcome-block__num">01</div>
+          <h3>Fewer bad locations</h3>
+          <p>The cost of a failed store goes beyond rent. Relocation, brand damage, capital written off, and time lost. BlackPrint surfaces the structural risk factors — cannibalization, demographic misalignment, competitive saturation — before a decision is made, not after.</p>
+        </div>
+        <div class="outcome-block reveal">
+          <div class="outcome-block__num">02</div>
+          <h3>Decisions you can defend internally</h3>
+          <p>In most organizations, a real estate recommendation is only as strong as the evidence behind it. BlackPrint produces structured, exportable analysis that allows expansion managers to bring data into executive conversations — not just instinct.</p>
+        </div>
+        <div class="outcome-block reveal">
+          <div class="outcome-block__num">03</div>
+          <h3>Expansion that scales consistently</h3>
+          <p>As brands grow, the informal processes that worked at 10 locations break down at 50. BlackPrint standardizes how markets are evaluated, how sites are compared, and how decisions are recorded — so expansion quality holds as the pace accelerates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SECTION 7: CREDIBILITY ======== -->
+  <section class="section section--dark" id="credibility">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="eyebrow">Why BlackPrint</span>
+        <h2>Built for Latin America.<br/>Not adapted from somewhere else.</h2>
+      </div>
+
+      <!-- Data stat -->
+      <div style="display:flex;justify-content:center;margin-bottom:var(--space-12);" class="reveal">
+        <div class="data-stat">
+          <div class="data-stat__num">150+</div>
+          <div class="data-stat__label">Structured datasets<br/>built for LATAM CRE</div>
+        </div>
+      </div>
+
+      <div class="credibility-pillars">
+        <div class="credibility-pillar reveal">
+          <div class="credibility-pillar__icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 3h14v14H3zM3 8h14M8 3v14"/>
+            </svg>
+          </div>
+          <h3>Depth of Data</h3>
+          <p>150+ structured datasets. Demographics, mobility, zoning, cadastral records, points of interest, on-market and off-market listings — all built for the Mexican and Latin American commercial real estate context. Not repurposed from a US or European platform. Structured for the markets where decisions are actually being made.</p>
+        </div>
+
+        <div class="credibility-pillar reveal">
+          <div class="credibility-pillar__icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="10" cy="10" r="7"/>
+              <path d="M10 6v4l3 2"/>
+            </svg>
+          </div>
+          <h3>Institutional Methodology</h3>
+          <p>BlackPrint's analytical framework was designed with one principle: decisions improve when data is structured. This is not a new idea. Bloomberg applied it to capital markets. BlackRock's Aladdin applied it to institutional risk. BlackPrint applies it to commercial real estate in LATAM. The methodology is the same. The market is underserved.</p>
+        </div>
+
+        <div class="credibility-pillar reveal">
+          <div class="credibility-pillar__icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2L2 7l10 5 10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3>Built Inside the Market</h3>
+          <p>BlackPrint operates from within the markets it analyzes. Our team understands how real estate decisions are made in Mexico — the role of local relationships, the informality of data, and the pace at which markets move. We built for that reality.</p>
+        </div>
+      </div>
+
+      <div class="quote-block reveal">
+        <blockquote>
+          "The most powerful technologies don't create noise. They become infrastructure."
+        </blockquote>
+        <cite>— Gilberto Perezalonso, Co-founder, BlackPrint</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SECTION 8: FINAL CTA ======== -->
+  <section class="final-cta" id="cta">
+    <div class="container">
+      <div class="reveal">
+        <span class="eyebrow">Next Step</span>
+        <h2>Evaluate your next expansion<br/>with structure. Book a 30-minute walkthrough.</h2>
+        <p>We will show you how your current expansion pipeline looks on BlackPrint — and what it reveals that isn't visible yet. No commitment. No pitch. Structured analysis from the first conversation.</p>
+        <div class="final-cta__actions">
+          <a href="demo.html" class="btn btn--primary btn--lg">Book a Demo →</a>
+          <p class="final-cta__note">30 minutes. Focused on your markets. No generic demo script.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="/" class="nav__logo" style="margin-bottom:1rem;display:inline-flex;">
+            <div class="nav__logo-mark">BP</div>
+            BLACKPRINT
+          </a>
+          <p>Location intelligence platform for commercial real estate teams in Latin America. Decisions made on evidence, not instinct.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="platform.html">How it Works</a></li>
+            <li><a href="data/index.html">Data</a></li>
+            <li><a href="platform.html#walkthrough">Walkthrough</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Use Cases</h4>
+          <ul>
+            <li><a href="use-cases/retail.html">Retail Expansion</a></li>
+            <li><a href="use-cases/qsr.html">QSR &amp; Franchise</a></li>
+            <li><a href="use-cases/developers.html">Developers</a></li>
+            <li><a href="use-cases/funds.html">Investment Funds</a></li>
+            <li><a href="use-cases/brokers.html">Brokers</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="company/index.html">About</a></li>
+            <li><a href="insights/index.html">Insights</a></li>
+            <li><a href="case-studies/index.html">Case Studies</a></li>
+            <li><a href="demo.html">Book a Demo</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 BlackPrint. All rights reserved.</p>
+        <p style="color:var(--depth-6);">TOTEC × BlackPrint</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

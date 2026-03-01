@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Demo — BlackPrint</title>
+  <meta name="description" content="Book a 30-minute BlackPrint walkthrough. We'll use your actual markets — not a generic demo. Structured analysis from the first conversation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <div class="nav__logo-mark">BP</div>
+        BLACKPRINT
+      </a>
+      <ul class="nav__links">
+        <li><a href="platform.html" class="nav__link">Platform</a></li>
+        <li><a href="use-cases/index.html" class="nav__link">Use Cases</a></li>
+        <li><a href="data/index.html" class="nav__link">Data</a></li>
+        <li><a href="company/index.html" class="nav__link">Company</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="demo.html" class="btn btn--primary">Book a Demo</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- DEMO PAGE LAYOUT -->
+  <div class="demo-page">
+
+    <!-- LEFT: INFO -->
+    <div class="demo-info">
+      <div>
+        <span class="eyebrow" style="margin-bottom:1.5rem;display:block;">Next Step</span>
+        <h1 style="font-size:clamp(1.75rem,3vw,2.5rem);margin-bottom:1.5rem;line-height:1.15;">See your expansion markets through structured data.</h1>
+        <p style="color:var(--depth-3);font-size:1.0625rem;line-height:1.65;margin-bottom:2rem;">
+          Book a 30-minute session. We'll use your actual markets — not a generic demo. You'll leave with a clearer view of at least one expansion decision you're currently evaluating.
+        </p>
+
+        <div class="demo-expect">
+          <p style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--depth-5);margin-bottom:1rem;">What the session covers</p>
+          <div class="demo-expect__item">
+            Your current expansion geography and the decisions you're working through
+          </div>
+          <div class="demo-expect__item">
+            A live walkthrough of BlackPrint using your specific markets
+          </div>
+          <div class="demo-expect__item">
+            Honest assessment of where structured data changes your current process
+          </div>
+        </div>
+
+        <div style="margin-top:2.5rem;padding:1.5rem;background:rgba(8,117,227,0.08);border:1px solid rgba(82,188,245,0.2);border-radius:10px;">
+          <p style="font-size:0.875rem;color:var(--depth-3);line-height:1.65;font-style:italic;">
+            No commitment required. The session is structured, focused, and built around your context — not a standard pitch.
+          </p>
+        </div>
+
+        <div class="stat-row" style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--depth-7);">
+          <div class="stat">
+            <span class="stat__value">30</span>
+            <span class="stat__label">Minute sessions</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value">150+</span>
+            <span class="stat__label">Datasets available</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value">0</span>
+            <span class="stat__label">Generic scripts</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: FORM -->
+    <div class="demo-form-side">
+      <div style="max-width:440px;width:100%;">
+        <h2 style="font-size:1.375rem;margin-bottom:0.5rem;">Book your session</h2>
+        <p style="color:var(--depth-5);font-size:0.9rem;margin-bottom:2rem;">All fields are required. We'll use your market input to prepare before the call.</p>
+
+        <form class="form" id="demoForm" action="demo/confirmed.html" method="get">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Organization or brand" required />
+          </div>
+
+          <div class="form-group">
+            <label for="role">Role / Title</label>
+            <select id="role" name="role" required>
+              <option value="" disabled selected>Select your role</option>
+              <option value="expansion">Expansion Manager</option>
+              <option value="fund">Fund Analyst / Investment</option>
+              <option value="franchise">Franchise / QSR Operator</option>
+              <option value="developer">Real Estate Developer</option>
+              <option value="broker">Broker / Advisor</option>
+              <option value="strategy">Strategy Lead</option>
+              <option value="executive">Executive / C-Suite</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="markets">Markets you're currently evaluating</label>
+            <textarea id="markets" name="markets" placeholder="e.g., Monterrey (Nuevo León), QSR expansion across Bajío region, 3 sites in CDMX…" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="timing">When are you looking to make a decision?</label>
+            <select id="timing" name="timing" required>
+              <option value="" disabled selected>Select a timeframe</option>
+              <option value="immediate">Within the next month</option>
+              <option value="quarter">This quarter</option>
+              <option value="half-year">Within 6 months</option>
+              <option value="exploring">Exploring / No fixed timeline</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;padding:1rem;">
+            Book a Demo →
+          </button>
+
+          <p class="form__note">
+            By submitting this form, you'll receive a calendar invite and confirmation from our team. Sessions are conducted via video call. We review your market input before we connect.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
