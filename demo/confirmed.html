@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confirmed — BlackPrint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <div class="nav__logo-mark">BP</div>
+        BLACKPRINT
+      </a>
+      <ul class="nav__links">
+        <li><a href="../platform.html" class="nav__link">Platform</a></li>
+        <li><a href="../use-cases/index.html" class="nav__link">Use Cases</a></li>
+        <li><a href="../data/index.html" class="nav__link">Data</a></li>
+        <li><a href="../company/index.html" class="nav__link">Company</a></li>
+      </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section style="min-height:100vh;display:flex;align-items:center;background:var(--depth-9);padding-top:var(--nav-height);">
+    <div class="container" style="max-width:640px;text-align:center;padding-top:var(--space-16);padding-bottom:var(--space-16);">
+
+      <!-- Check icon -->
+      <div style="width:64px;height:64px;border-radius:50%;background:rgba(103,172,92,0.15);border:1px solid rgba(103,172,92,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-8);">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#67AC5C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="5,14 11,20 23,8"/>
+        </svg>
+      </div>
+
+      <span class="eyebrow" style="margin-bottom:1.5rem;display:block;">Next Step</span>
+      <h1 style="font-size:clamp(1.75rem,3vw,2.5rem);margin-bottom:1.5rem;">You're confirmed.<br/>Here's what happens next.</h1>
+      <p style="color:var(--depth-3);font-size:1.0625rem;line-height:1.65;margin-bottom:var(--space-10);">
+        Your session is booked. A confirmation is on its way to your inbox. Before the call, we'll review the markets you shared. Come prepared with one location decision you're working through — the session is most useful when it's grounded in something real.
+      </p>
+
+      <div style="background:var(--depth-8);border:1px solid var(--depth-7);border-radius:12px;padding:var(--space-8);text-align:left;margin-bottom:var(--space-8);">
+        <p style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--depth-5);margin-bottom:1rem;">What we'll do before the call</p>
+        <div class="demo-expect__item" style="display:flex;align-items:flex-start;gap:0.75rem;padding:0.75rem 0;border-bottom:1px solid var(--depth-7);font-size:0.9375rem;color:var(--depth-3);">
+          <span style="width:6px;height:6px;border-radius:50%;background:var(--blue-highlight);flex-shrink:0;margin-top:7px;display:block;"></span>
+          Review the markets you shared in your submission
+        </div>
+        <div class="demo-expect__item" style="display:flex;align-items:flex-start;gap:0.75rem;padding:0.75rem 0;border-bottom:1px solid var(--depth-7);font-size:0.9375rem;color:var(--depth-3);">
+          <span style="width:6px;height:6px;border-radius:50%;background:var(--blue-highlight);flex-shrink:0;margin-top:7px;display:block;"></span>
+          Load your specific geography into the platform ahead of time
+        </div>
+        <div class="demo-expect__item" style="display:flex;align-items:flex-start;gap:0.75rem;padding:0.75rem 0;font-size:0.9375rem;color:var(--depth-3);">
+          <span style="width:6px;height:6px;border-radius:50%;background:var(--blue-highlight);flex-shrink:0;margin-top:7px;display:block;"></span>
+          Prepare the walkthrough around your actual decision context
+        </div>
+      </div>
+
+      <p style="color:var(--depth-5);font-size:0.875rem;margin-bottom:var(--space-8);">While you wait — explore how BlackPrint structures expansion analysis:</p>
+      <a href="../platform.html" class="btn btn--secondary">Review the platform →</a>
+
+    </div>
+  </section>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
